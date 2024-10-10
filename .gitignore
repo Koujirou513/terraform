@@ -1,7 +1,28 @@
-*.tfstate
-*.tfstate.backup
-crash.log
-*.tfstate.d/
-*.log
-*.tfplan
+# 全てのディレクトリ内の .terraform/ ディレクトリを除外
 **/.terraform/*
+
+# terraformの状態ファイル
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# 変数ファイル
+*.tfvars
+*.tfvars.json
+
+# terraformのプランファイル
+*.tfplan
+
+# terraformのクラッシュログ
+crash.log
+
+# Terraformのオーバーライドファイル
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# TerraformのCLI設定ファイル
+.terraformrc
+terraform.rc
+
